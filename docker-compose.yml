@@ -14,7 +14,7 @@ services:
     labels:
       - "traefik.enable=true"
       # Remplacer par votre domaine dans Dokploy
-      - "traefik.http.routers.laviguerie.rule=Host(`laviguerie.votre-domaine.com`)"
+      - "traefik.http.routers.laviguerie.rule=Host(`${DOKPLOY_DOMAIN}`)"
       - "traefik.http.routers.laviguerie.entrypoints=web"
       - "traefik.http.services.laviguerie.loadbalancer.server.port=80"
     healthcheck:
