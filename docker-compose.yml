@@ -1,0 +1,21 @@
+services:
+  laviguerie:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: laviguerie:latest
+    container_name: laviguerie_web
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    labels:
+      - "traefik.enable=true"
+      # Remplacer par votre domaine dans Dokploy
+      - "traefik.http.routers.laviguerie.rule=Host(`laviguerie.votre-domaine.com`)"
+      - "traefik.http.routers.laviguerie.entrypoints=websecure"
+      - "traefik.http.routers.laviguerie.tls.certresolver=letsencrypt"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

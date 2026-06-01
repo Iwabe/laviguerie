@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Viguerie — Restaurant à Aigues-Mortes</title>
+  <meta name="description" content="La Viguerie, restaurant convivial franco-italien au cœur d'Aigues-Mortes. Pizzas, grillades, salades et profiteroles maison. Terrasse face à la Chapelle des Pénitents Blancs. Réservez au 04 34 28 61 97." />
+  <meta name="theme-color" content="#FBF8F2" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🍕</text></svg>" />
+</head>
+<body>
+
+  <!-- STATUT TEMPS RÉEL -->
+  <div id="status-bar" role="status" aria-live="polite">
+    <span class="s-dot" aria-hidden="true"></span>
+    <span id="status-text">Vérification…</span>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav id="nav" aria-label="Navigation principale">
+    <a href="#hero" class="nav-logo">
+      La Viguerie
+      <small>Aigues-Mortes · Gard</small>
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#ambiance">Le restaurant</a></li>
+      <li><a href="#carte">La carte</a></li>
+      <li><a href="#galerie">Photos</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#infos">Infos</a></li>
+      <li><a href="tel:+33434286197" class="nav-cta">Réserver</a></li>
+    </ul>
+
+    <button class="nav-burger" id="nav-burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main>
+
+    <!-- ══════════════════ HERO ══════════════════ -->
+    <section id="hero">
+
+      <!-- REMPLACER : photo de la terrasse ou façade du restaurant -->
+      <div class="photo-placeholder hero-photo" role="img" aria-label="Photo à ajouter : terrasse ou façade du restaurant">
+        <div class="photo-placeholder-icon">📷</div>
+        <div class="photo-placeholder-label">Photo de la terrasse ou façade<br />du restaurant</div>
+        <div class="photo-placeholder-hint">Remplacer cette zone par votre photo</div>
+      </div>
+
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-tag">Restaurant · Aigues-Mortes</div>
+
+        <h1 class="hero-title">
+          La <em>Viguerie</em>
+        </h1>
+
+        <p class="hero-sub">
+          Une table chaleureuse au cœur de la cité médiévale —
+          cuisines française et italienne, grande terrasse,
+          et des profiteroles dont on se souvient longtemps.
+        </p>
+
+        <div class="hero-actions">
+          <a href="tel:+33434286197" class="btn btn-primary">Réserver une table</a>
+          <a href="#carte" class="btn btn-outline">Voir la carte</a>
+          <div class="hero-rating" aria-label="Note 4,5 sur 5 basée sur plus de 1000 avis">
+            <span class="hero-rating-stars">★★★★★</span>
+            <span>4,5 / 5</span>
+            <span class="hero-rating-count">· +1 000 avis Google</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ AMBIANCE ══════════════════ -->
+    <section id="ambiance" aria-labelledby="ambiance-title" style="padding: 4rem 0; background: var(--cream-dark);">
+      <div style="max-width:1180px; margin:0 auto; padding:0 2.5rem; display:flex; align-items:center; gap:3.5rem; flex-wrap:wrap;">
+
+        <!-- Photo -->
+        <img src="images/interieur.jpg"
+             id="ambiance-img"
+             alt="Salle du restaurant La Viguerie, tables dressées, ambiance chaleureuse"
+             style="width:480px; max-width:100%; height:310px; object-fit:cover; object-position:60% center; border-radius:6px; flex-shrink:0; box-shadow:0 6px 28px rgba(44,30,18,0.14); display:block;" />
+
+        <!-- Texte -->
+        <div style="flex:1; min-width:260px;">
+          <div style="font-size:0.65rem; font-weight:500; letter-spacing:0.22em; text-transform:uppercase; color:var(--terracotta); display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+            <span style="display:inline-block; width:20px; height:1px; background:var(--terracotta); flex-shrink:0;"></span>
+            Notre restaurant
+          </div>
+          <h2 id="ambiance-title" style="font-family:'Playfair Display',Georgia,serif; font-size:clamp(1.8rem,3vw,2.6rem); font-weight:400; line-height:1.15; color:var(--brown); margin-bottom:1rem;">
+            Une adresse qu'on aime <em style="font-style:italic; color:var(--terracotta);">retrouver</em>
+          </h2>
+          <p style="font-size:0.9rem; color:var(--text-muted); line-height:1.8; margin-bottom:0.75rem;">
+            Installée Place de la Viguerie, à deux pas des remparts d'Aigues-Mortes, notre table réunit les saveurs du Sud — pizzas généreuses, grillades fondantes et desserts qui font revenir.
+          </p>
+          <p style="font-size:0.9rem; color:var(--text-muted); line-height:1.8; margin-bottom:1.5rem;">
+            Que vous soyez en famille, entre amis ou en amoureux, notre équipe vous accueille avec le sourire dans une atmosphère décontractée. En terrasse face à la Chapelle des Pénitents Blancs, vous vous sentirez toujours les bienvenus.
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:0.45rem;">
+            <span style="font-size:0.68rem; padding:0.3rem 0.8rem; border-radius:100px; border:1px solid var(--border); color:var(--text-muted);">Grande terrasse</span>
+            <span style="font-size:0.68rem; padding:0.3rem 0.8rem; border-radius:100px; border:1px solid var(--border); color:var(--text-muted);">Pizzas maison</span>
+            <span style="font-size:0.68rem; padding:0.3rem 0.8rem; border-radius:100px; border:1px solid var(--border); color:var(--text-muted);">Familles bienvenues</span>
+            <span style="font-size:0.68rem; padding:0.3rem 0.8rem; border-radius:100px; border:1px solid var(--border); color:var(--text-muted);">Vente à emporter</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════ LA CARTE ══════════════════ -->
+    <section id="carte" class="section section-alt" aria-labelledby="carte-title">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div class="section-eyebrow">La carte</div>
+          <h2 class="section-title" id="carte-title">Notre menu</h2>
+          <p class="section-desc">Cuisine maison, généreuse et sincère. Formule midi disponible.</p>
+        </div>
+
+        <!-- Formule -->
+        <div class="menu-formule reveal rd1">
+          <div class="formule-title">Formule Pizza</div>
+          <div class="formule-desc">½ Pizza au choix accompagnée de sa salade composée<br /><span style="font-size:0.75rem;color:var(--text-muted);">Salade verte, noix, lardons, œuf dur, oignon</span></div>
+          <div class="formule-price">14,50 €</div>
+        </div>
+
+        <!-- Menu Enfant -->
+        <div class="menu-formule reveal rd1" style="background:var(--cream);">
+          <div class="formule-title" style="color:var(--olive);">Menu Enfant <span style="font-size:0.7rem;font-weight:400;color:var(--text-muted);">jusqu'à 10 ans</span></div>
+          <div class="formule-desc" style="color:var(--text-muted);">½ Pizza Jambon Fromage ou Margherita · Steak Haché Pâtes au beurre <em>ou</em> Tagliatelle Carbonara + Dessert au choix (Glace Disney ou Crème Caramel)</div>
+          <div class="formule-price" style="color:var(--olive);">8,00 €</div>
+        </div>
+
+        <!-- ONGLETS -->
+        <nav class="menu-tabs reveal rd1" role="tablist" aria-label="Sections du menu">
+          <button class="mtab active" role="tab" aria-selected="true"  aria-controls="mp-entrees"  id="mt-entrees"  data-cat="entrees">Entrées &amp; Salades</button>
+          <button class="mtab"        role="tab" aria-selected="false" aria-controls="mp-pizzas"   id="mt-pizzas"   data-cat="pizzas">Pizzas</button>
+          <button class="mtab"        role="tab" aria-selected="false" aria-controls="mp-tapas"    id="mt-tapas"    data-cat="tapas">Tapas</button>
+          <button class="mtab"        role="tab" aria-selected="false" aria-controls="mp-viandes"  id="mt-viandes"  data-cat="viandes">Viandes</button>
+          <button class="mtab"        role="tab" aria-selected="false" aria-controls="mp-pates"    id="mt-pates"    data-cat="pates">Pâtes</button>
+          <button class="mtab"        role="tab" aria-selected="false" aria-controls="mp-desserts" id="mt-desserts" data-cat="desserts">Desserts &amp; Glaces</button>
+          <button class="mtab"        role="tab" aria-selected="false" aria-controls="mp-boissons" id="mt-boissons" data-cat="boissons">Boissons</button>
+        </nav>
+
+        <!-- ENTRÉES & SALADES -->
+        <div class="menu-panel active" id="mp-entrees" role="tabpanel" aria-labelledby="mt-entrees">
+          <div class="menu-grid">
+            <div class="menu-item"><div><div class="mi-name">Assiette de Charcuterie Artisanale de Lozère</div><div class="mi-desc">Maison DAUDET Le Malzieu</div></div><div class="mi-price">16,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Os à Moelle à la Fleur de Sel</div><div class="mi-desc">Et ses toasts grillés</div></div><div class="mi-price">9,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Caprese</div><div class="mi-desc">Mesclun, tomate de saison, mozzarella Burrata, pesto, pignons</div></div><div class="mi-price">14,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">César</div><div class="mi-desc">Sauce à base d'anchois — Salade, poulet mariné, parmesan, croûtons, tomates, sauce césar</div></div><div class="mi-price">12,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Normandie</div><div class="mi-desc">Salade, camembert au four, jambon cru, compote d'oignons, pommes grenailles, croûtons</div></div><div class="mi-price">14,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Thaï</div><div class="mi-desc">Poulpes ou poulet marinés — choux chinois, légumes craquants, cacahuètes grillées</div></div><div class="mi-price">13,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Gers</div><div class="mi-desc">Servie dans son chausson de pâte à pizza — mesclun, gésier, magret fumé, légumes grillés, œuf poêlé</div></div><div class="mi-price">14,00 €</div></div>
+          </div>
+        </div>
+
+        <!-- PIZZAS -->
+        <div class="menu-panel" id="mp-pizzas" role="tabpanel" aria-labelledby="mt-pizzas">
+          <h3>— Pizza Tomate —</h3>
+          <div class="menu-grid" style="margin-bottom:2.5rem;">
+            <div class="menu-item"><div><div class="mi-name">Margherita</div><div class="mi-desc">Tomate, mozzarella</div></div><div class="mi-price">12,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Reine</div><div class="mi-desc">Tomate, épaule, mozzarella, emmental</div></div><div class="mi-price">12,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Royale</div><div class="mi-desc">Tomate, épaule, champignon, mozzarella, emmental</div></div><div class="mi-price">13,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Super Royale</div><div class="mi-desc">Tomate, épaule, champignon, œuf, mozzarella, emmental</div></div><div class="mi-price">13,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Napolitaine</div><div class="mi-desc">Tomate, anchois, mozzarella, emmental</div></div><div class="mi-price">12,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Fromagère</div><div class="mi-desc">Tomate, roquefort, reblochon, féta, mozzarella, emmental</div></div><div class="mi-price">14,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Tony</div><div class="mi-desc">Tomate, lardon, aubergine, chèvre, mozzarella, emmental</div></div><div class="mi-price">14,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Sicilienne</div><div class="mi-desc">Tomate, chorizo, poivron, câpre, oignon, mozzarella, emmental</div></div><div class="mi-price">14,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Viguerie</div><div class="mi-desc">Tomate, jambon cru, parmesan, poivrons, pignon, mozzarella, emmental</div><div class="mi-tags"><span class="mi-tag t-c">Signature</span></div></div><div class="mi-price">14,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Végétarienne</div><div class="mi-desc">Tomate, champignon, asperge, poivron, oignon, mozzarella, emmental</div></div><div class="mi-price">14,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Constance</div><div class="mi-desc">Tomate, chorizo, oignon, miel, chèvre, mozzarella, emmental</div></div><div class="mi-price">14,00 €</div></div>
+          </div>
+
+          <h3>— Pizza Crème —</h3>
+          <div class="menu-grid">
+            <div class="menu-item"><div><div class="mi-name">Bergère</div><div class="mi-desc">Crème, roquefort, reblochon, féta, mozzarella, emmental</div></div><div class="mi-price">14,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Campagnarde</div><div class="mi-desc">Crème, lardon, reblochon, champignon, oignon, mozzarella, emmental</div></div><div class="mi-price">14,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Grenobloise</div><div class="mi-desc">Crème, chèvre, miel, noix, oignon, mozzarella, emmental</div><div class="mi-tags"><span class="mi-tag t-c">Signature</span></div></div><div class="mi-price">14,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Asiatique</div><div class="mi-desc">Crème, poulet, ananas, oignon, curry, lait de coco, mozzarella, emmental</div></div><div class="mi-price">14,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Méditerranéenne</div><div class="mi-desc">Crème, brandade de morue, poivron, mozzarella, emmental</div></div><div class="mi-price">14,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Pissaladière</div><div class="mi-desc">Oignon, anchois, huile d'olive</div></div><div class="mi-price">14,50 €</div></div>
+          </div>
+        </div>
+
+        <!-- TAPAS -->
+        <div class="menu-panel" id="mp-tapas" role="tabpanel" aria-labelledby="mt-tapas">
+          <div style="background:var(--brown);color:var(--cream);border-radius:var(--radius);padding:1.5rem 2rem;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+            <div>
+              <div style="font-size:0.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--terracotta);margin-bottom:.4rem;">Formule tapas</div>
+              <div style="font-family:var(--serif);font-size:1.1rem;">5 tapas au choix</div>
+            </div>
+            <div style="font-family:var(--serif);font-size:2rem;font-weight:400;">20,00 €</div>
+          </div>
+          <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1.5rem;">Tapas à la pièce : <strong>4,50 €</strong></p>
+          <div class="menu-grid">
+            <div class="menu-item"><div><div class="mi-name">Moules à la Sétoise</div></div></div>
+            <div class="menu-item"><div><div class="mi-name">Mandarlata</div></div></div>
+            <div class="menu-item"><div><div class="mi-name">Seiches Persillées</div></div></div>
+            <div class="menu-item"><div><div class="mi-name">Jamon Pan Con Tomates</div></div></div>
+            <div class="menu-item"><div><div class="mi-name">Chorizo Grillé</div></div></div>
+          </div>
+        </div>
+
+        <!-- PÂTES -->
+        <div class="menu-panel" id="mp-pates" role="tabpanel" aria-labelledby="mt-pates">
+          <div class="menu-grid">
+            <div class="menu-item"><div><div class="mi-name">Tagliatelle Carbonara</div></div><div class="mi-price">12,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Linguine aux Poulpes</div></div><div class="mi-price">13,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Lasagne</div></div><div class="mi-price">12,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Penne Moules et Chorizo</div></div><div class="mi-price">13,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Linguine aux Crustacés</div></div><div class="mi-price">17,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Penne aux Cèpes</div></div><div class="mi-price">13,00 €</div></div>
+          </div>
+        </div>
+
+        <!-- VIANDES GARNIES -->
+        <div class="menu-panel" id="mp-viandes" role="tabpanel" aria-labelledby="mt-viandes">
+          <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1.5rem;font-style:italic;">Accompagnement au choix : Pennes aux Cèpes ou Garniture du jour</p>
+          <div class="menu-grid">
+            <div class="menu-item"><div><div class="mi-name">Entrecôte de Bœuf Race à Viande</div><div class="mi-desc">Environ 300g</div></div><div class="mi-price">23,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Magret de Canard</div><div class="mi-desc">Environ 300g</div></div><div class="mi-price">19,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Andouillette de Toro</div></div><div class="mi-price">16,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Brochette de Toro façon Thaï</div></div><div class="mi-price">18,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Burger du Chef</div></div><div class="mi-price">16,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Côte de Toro</div><div class="mi-desc">Environ 350g</div><div class="mi-tags"><span class="mi-tag t-c">Spécialité</span></div></div><div class="mi-price">24,00 €</div></div>
+          </div>
+        </div>
+
+        <!-- DESSERTS & GLACES -->
+        <div class="menu-panel" id="mp-desserts" role="tabpanel" aria-labelledby="mt-desserts">
+          <h3>— Desserts —</h3>
+          <div class="menu-grid" style="margin-bottom:2.5rem;">
+            <div class="menu-item"><div><div class="mi-name">Assiette de Fromage "Maison Chapert"</div></div><div class="mi-price">6,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Pelardon au Miel ou à l'Huile d'Olive</div></div><div class="mi-price">6,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Pâtisserie Maison</div></div><div class="mi-price">7,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Baba au Rhum et sa Fiole de Rhum</div></div><div class="mi-price">6,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Maxi Profiterolle</div><div class="mi-desc">Choux, glace vanille, chocolat chaud</div><div class="mi-tags"><span class="mi-tag t-c">Signature</span></div></div><div class="mi-price">9,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Bolet Glacé</div></div><div class="mi-price">7,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Crème Caramel</div></div><div class="mi-price">6,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Café Gourmand</div></div><div class="mi-price">7,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Thé Gourmand</div></div><div class="mi-price">8,00 €</div></div>
+          </div>
+
+          <h3>— Nos Glaces —</h3>
+          <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:1.25rem;">
+            <strong>Glaces :</strong> Chocolat, Vanille, Café, Menthe, Coco, Caramel Fleur de Sel, Crème Brûlée, Marron<br />
+            <strong>Sorbets :</strong> Citron Vert, Cassis, Poire, Fraise, Framboise, Pêche, Orange
+          </p>
+          <div class="menu-grid" style="margin-bottom:1.5rem;">
+            <div class="menu-item"><div><div class="mi-name">1 Boule</div></div><div class="mi-price">2,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">2 Boules</div></div><div class="mi-price">4,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">3 Boules</div></div><div class="mi-price">6,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Supplément Chantilly</div></div><div class="mi-price">1,00 €</div></div>
+          </div>
+          <h3>— Coupes glacées —</h3>
+          <div class="menu-grid">
+            <div class="menu-item"><div><div class="mi-name">Café Liégeois</div><div class="mi-desc">Glace café, café expresso, chantilly</div></div><div class="mi-price">7,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Chocolat Liégeois</div><div class="mi-desc">Glace chocolat, chocolat chaud, chantilly</div></div><div class="mi-price">7,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Dame Blanche</div><div class="mi-desc">Glace vanille, meringue, chocolat chaud, chantilly</div></div><div class="mi-price">7,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Ardéchoise</div><div class="mi-desc">Glace vanille, crème brûlée, crème de marron, chantilly</div></div><div class="mi-price">7,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Banana Split</div><div class="mi-desc">Glace vanille, chocolat, fraise, banane, chocolat chaud, chantilly</div></div><div class="mi-price">7,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Macao</div><div class="mi-desc">Glace café, vanille, chocolat chaud, chantilly</div></div><div class="mi-price">7,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Coconut</div><div class="mi-desc">Glace coco, chocolat, chocolat chaud, coco râpé, chantilly</div></div><div class="mi-price">7,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Fruitière</div><div class="mi-desc">Sorbet fraise, framboise, cassis, gelée fruits rouges, chantilly</div></div><div class="mi-price">8,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Disney</div><div class="mi-desc">Glace vanille, smarties, chantilly</div></div><div class="mi-price">5,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Colonel</div><div class="mi-desc">Sorbet citron vert, vodka</div></div><div class="mi-price">8,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">William</div><div class="mi-desc">Sorbet poire, alcool de poire</div></div><div class="mi-price">8,50 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Cévenade</div><div class="mi-desc">Glace marron, liqueur de châtaigne</div></div><div class="mi-price">8,50 €</div></div>
+          </div>
+        </div>
+
+        <!-- BOISSONS CHAUDES -->
+        <div class="menu-panel" id="mp-boissons" role="tabpanel" aria-labelledby="mt-boissons">
+          <div class="menu-grid">
+            <div class="menu-item"><div><div class="mi-name">Café Firenze 100% Arabica</div></div><div class="mi-price">2,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Décaféiné 100% Arabica</div></div><div class="mi-price">2,20 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Café Noisette</div></div><div class="mi-price">3,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Café Double</div></div><div class="mi-price">3,70 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Café au Lait</div></div><div class="mi-price">4,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Cappuccino</div></div><div class="mi-price">4,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Chocolat Chaud</div></div><div class="mi-price">4,00 €</div></div>
+            <div class="menu-item"><div><div class="mi-name">Thé et Infusion</div></div><div class="mi-price">3,50 €</div></div>
+          </div>
+          <p style="font-size:0.75rem;color:var(--text-muted);margin-top:1.5rem;padding:0.75rem 1rem;border:1px solid var(--border);border-radius:var(--radius);">
+            Les paiements s'effectuent <strong>uniquement à table</strong>. Prix nets, service compris.
+          </p>
+        </div>
+
+        <p style="font-size:0.75rem;color:var(--text-muted);margin-top:1.75rem;font-style:italic;" class="reveal">
+          Carte susceptible d'évoluer selon les saisons.
+        </p>
+
+
+        <!-- ONGLETS -->
+        <!-- ══════════════════ GALERIE ══════════════════ -->
+    <section id="galerie" class="section" aria-labelledby="galerie-title">
+      <div class="container">
+
+        <div class="section-header reveal" style="margin-bottom:2rem;">
+          <div class="section-eyebrow">Photos</div>
+          <h2 class="section-title" id="galerie-title">Venez comme vous êtes</h2>
+          <p class="section-desc">
+            Envoyez-nous vos photos du restaurant pour les afficher ici.
+          </p>
+        </div>
+
+        <div class="galerie-grid reveal rd1">
+          <div class="gitem">
+            <img src="images/interieur.jpg"
+                 alt="Salle du restaurant La Viguerie"
+                 loading="lazy"
+                 style="width:100%;height:100%;object-fit:cover;" />
+            <div class="gitem-label">La salle du restaurant</div>
+          </div>
+          <!-- REMPLACER : photo d'une pizza -->
+          <div class="gitem photo-placeholder" style="border-radius:0; border:none;" role="img" aria-label="Photo : pizzas maison">
+            <div class="photo-placeholder-icon">📷</div>
+            <div class="photo-placeholder-label">Photo d'une pizza</div>
+          </div>
+          <!-- REMPLACER : photo des profiteroles -->
+          <div class="gitem photo-placeholder" style="border-radius:0; border:none;" role="img" aria-label="Photo : profiteroles signature">
+            <div class="photo-placeholder-icon">📷</div>
+            <div class="photo-placeholder-label">Photo des profiteroles</div>
+          </div>
+          <!-- REMPLACER : photo d'Aigues-Mortes ou remparts -->
+          <div class="gitem photo-placeholder" style="border-radius:0; border:none;" role="img" aria-label="Photo : Aigues-Mortes ou remparts">
+            <div class="photo-placeholder-icon">📷</div>
+            <div class="photo-placeholder-label">Aigues-Mortes / remparts</div>
+          </div>
+          <!-- REMPLACER : photo ambiance soir ou repas -->
+          <div class="gitem photo-placeholder" style="border-radius:0; border:none;" role="img" aria-label="Photo : ambiance soir">
+            <div class="photo-placeholder-icon">📷</div>
+            <div class="photo-placeholder-label">Ambiance soirée</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════ AVIS ══════════════════ -->
+    <section class="section section-alt" aria-labelledby="avis-title">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div class="section-eyebrow">Avis clients</div>
+          <h2 class="section-title" id="avis-title">
+            Ce que disent<br />nos clients
+          </h2>
+          <p class="section-desc">
+            +1 000 avis Google · Note moyenne <strong>4,5 / 5</strong> ·
+            <strong>#3 sur 120</strong> restaurants à Aigues-Mortes
+          </p>
+        </div>
+
+        <div class="avis-grid">
+
+          <article class="avis-card featured reveal">
+            <div class="source-ta">⭐ Google</div>
+            <div class="avis-stars">★★★★★</div>
+            <p class="avis-text">
+              "Les profiteroles étaient ÉNORMES et absolument délicieuses. On a dîné en terrasse face à la chapelle, ambiance parfaite. Le service était rapide et souriant malgré l'affluence. On reviendra sans hésiter à notre prochain passage à Aigues-Mortes !"
+            </p>
+            <div class="avis-author">
+              <div class="avis-av">ML</div>
+              <div>
+                <div class="avis-name">Marie-Laure G.</div>
+                <div class="avis-detail">Montpellier · Mai 2026</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="avis-card reveal rd1">
+            <div class="source-ta">⭐ Google</div>
+            <div class="avis-stars">★★★★★</div>
+            <p class="avis-text">
+              "La pizza crème-miel-noix, c'est une révélation. On n'en avait jamais mangé de pareille. Cadre magnifique, personnel adorable, prix très corrects. Une adresse qu'on recommande à tous nos amis qui passent dans la région."
+            </p>
+            <div class="avis-author">
+              <div class="avis-av">TP</div>
+              <div>
+                <div class="avis-name">Thomas P.</div>
+                <div class="avis-detail">Paris · Avril 2026</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="avis-card reveal rd2">
+            <div class="source-ta">⭐ TripAdvisor</div>
+            <div class="avis-stars">★★★★★</div>
+            <p class="avis-text">
+              "Repas en famille avec 3 générations, tout le monde a été servi avec le sourire. Menu enfant nickel, entrecôte saignante parfaite, et les lasagnes maison de ma mère ont validé — c'est dire ! La terrasse est un régal."
+            </p>
+            <div class="avis-author">
+              <div class="avis-av">CF</div>
+              <div>
+                <div class="avis-name">Christine F.</div>
+                <div class="avis-detail">Lyon · Août 2025</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="avis-card reveal">
+            <div class="source-ta">⭐ Google</div>
+            <div class="avis-stars">★★★★☆</div>
+            <p class="avis-text">
+              "Belle découverte lors de notre séjour en Camargue. Le poulpe grillé était excellent, bien cuit et parfumé. La sangria maison est très bonne aussi. Terrasse agréable, un peu d'attente le soir mais ça vaut le coup."
+            </p>
+            <div class="avis-author">
+              <div class="avis-av">JR</div>
+              <div>
+                <div class="avis-name">Jean-René M.</div>
+                <div class="avis-detail">Bordeaux · Juillet 2025</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="avis-card reveal rd1">
+            <div class="source-ta">⭐ TripAdvisor</div>
+            <div class="avis-stars">★★★★★</div>
+            <p class="avis-text">
+              "Accueil chaleureux, cuisine généreuse et honnête. Le baba au rhum était servi avec une chantilly comme j'aime — épaisse et peu sucrée. Un vrai bistrot comme on n'en fait plus. Bravo à toute l'équipe !"
+            </p>
+            <div class="avis-author">
+              <div class="avis-av">SC</div>
+              <div>
+                <div class="avis-name">Sophie C.</div>
+                <div class="avis-detail">Nîmes · Mars 2026</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="avis-card reveal rd2">
+            <div class="source-ta">⭐ Google</div>
+            <div class="avis-stars">★★★★★</div>
+            <p class="avis-text">
+              "On revient chaque été depuis 4 ans. La carte évolue toujours un peu, mais les fondamentaux restent : accueil top, pizza excellente, desserts à tomber. C'est notre cantine d'Aigues-Mortes !"
+            </p>
+            <div class="avis-author">
+              <div class="avis-av">AB</div>
+              <div>
+                <div class="avis-name">Antoine B.</div>
+                <div class="avis-detail">Toulouse · Été 2025</div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ INFOS PRATIQUES ══════════════════ -->
+    <section id="infos" class="section" aria-labelledby="infos-title">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div class="section-eyebrow">Infos pratiques</div>
+          <h2 class="section-title" id="infos-title">Comment nous trouver</h2>
+        </div>
+
+        <div class="infos-grid">
+
+          <!-- Colonne gauche : horaires + contact -->
+          <div style="display:flex; flex-direction:column; gap:1.5rem;">
+
+            <div class="info-card reveal">
+              <div class="info-card-title">Horaires d'ouverture</div>
+              <div class="horaires">
+                <div class="h-row">
+                  <span class="hday">Lundi</span>
+                  <span class="htime">11h45 – 14h00 &nbsp;·&nbsp; 18h45 – 21h15</span>
+                </div>
+                <div class="h-row">
+                  <span class="hday">Mardi</span>
+                  <span class="htime">11h45 – 14h00 &nbsp;·&nbsp; 18h45 – 21h15</span>
+                </div>
+                <div class="h-row">
+                  <span class="hday">Mercredi</span>
+                  <span class="htime">11h45 – 14h00 &nbsp;·&nbsp; 18h45 – 21h15</span>
+                </div>
+                <div class="h-row">
+                  <span class="hday">Jeudi</span>
+                  <span class="htime">11h45 – 14h00 &nbsp;·&nbsp; 18h45 – 21h15</span>
+                </div>
+                <div class="h-row">
+                  <span class="hday">Vendredi</span>
+                  <span class="htime">11h45 – 14h00 &nbsp;·&nbsp; 18h45 – 21h15</span>
+                </div>
+                <div class="h-sep"></div>
+                <div class="h-row">
+                  <span class="hday">Samedi</span>
+                  <span class="htime">11h45 – 14h00 &nbsp;·&nbsp; 18h45 – 21h15</span>
+                </div>
+                <div class="h-row">
+                  <span class="hday">Dimanche</span>
+                  <span class="htime">11h45 – 14h00 &nbsp;·&nbsp; 18h45 – 21h15</span>
+                </div>
+              </div>
+              <p style="font-size:0.72rem;color:var(--text-muted);margin-top:1rem;font-style:italic;">
+                ⚠️ Horaires indicatifs — peuvent varier selon saison. Appelez pour confirmer.
+              </p>
+            </div>
+
+            <div class="info-card reveal rd1">
+              <div class="info-card-title">Contact</div>
+              <div class="contact-list">
+                <div class="contact-item">
+                  <span class="contact-icon"></span>
+                  <div>
+                    <a href="tel:+33434286197"><strong>04 34 28 61 97</strong></a><br />
+                    <span style="font-size:0.75rem;color:var(--text-muted);">Réservations par téléphone conseillées</span>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon">📍</span>
+                  <div>
+                    Place de la Viguerie<br />
+                    (angle Boulevard Gambetta)<br />
+                    <strong>30220 Aigues-Mortes</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top:1.25rem;">
+                <div style="font-size:0.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.75rem;">Services disponibles</div>
+                <div class="services-list">
+                  <span class="service-badge">Terrasse</span>
+                  <span class="service-badge">À emporter</span>
+                  <span class="service-badge">Chaises enfants</span>
+                  <span class="service-badge">Accès PMR</span>
+                  <span class="service-badge">CB acceptée</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Colonne droite : carte + photo -->
+          <div style="display:flex; flex-direction:column; gap:1.5rem;">
+
+            <div class="info-card reveal rd1">
+              <div class="info-card-title">Nous trouver</div>
+
+              <!-- Carte Google Maps intégrée -->
+              <div style="border-radius:var(--radius); overflow:hidden; margin-top:0.5rem;">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.1!2d4.19307!3d43.56632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b5b3e7e7e7e7e7%3A0x0!2sPlace+de+la+Viguerie%2C+30220+Aigues-Mortes!5e0!3m2!1sfr!2sfr!4v1"
+                  width="100%"
+                  height="300"
+                  style="border:0; display:block;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Carte - La Viguerie, Aigues-Mortes"
+                  aria-label="Localisation de La Viguerie sur la carte">
+                </iframe>
+              </div>
+
+              <a href="https://maps.google.com/?q=Place+de+la+Viguerie,+30220+Aigues-Mortes"
+                 target="_blank" rel="noopener"
+                 class="btn btn-outline-dark"
+                 style="margin-top:1rem; width:100%; justify-content:center; font-size:0.78rem; border-radius:var(--radius);">
+                Ouvrir dans Google Maps
+              </a>
+            </div>
+
+            <!-- REMPLACER : photo de la place ou de la façade du restaurant -->
+            <div class="photo-placeholder reveal rd2" style="min-height:200px; border-radius:var(--radius);" role="img" aria-label="Photo à ajouter : façade ou place du restaurant">
+              <div class="photo-placeholder-icon">📷</div>
+              <div class="photo-placeholder-label">Photo de la façade<br />ou de la place du restaurant</div>
+              <div class="photo-placeholder-hint">Remplacer par votre photo</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ CTA RÉSERVATION ══════════════════ -->
+    <section id="reservation" class="section">
+      <div class="container">
+        <div class="res-inner reveal">
+          <div class="res-text">
+            <div class="section-eyebrow">Réservez votre table</div>
+            <h2 class="res-title">
+              Une soirée en<br /><em>terrasse</em> vous attend
+            </h2>
+            <p class="res-sub">
+              Pour être sûr d'avoir votre table, surtout en haute saison,
+              nous vous conseillons de réserver par téléphone.
+              Notre équipe vous accueille avec plaisir.
+            </p>
+          </div>
+          <div class="res-actions">
+            <div class="res-tel">
+              <a href="tel:+33434286197">04 34 28 61 97</a>
+            </div>
+            <div class="res-note">Du lundi au dimanche · Midi et soir</div>
+            <a href="tel:+33434286197" class="btn btn-primary" style="margin-top:.5rem;">Appeler maintenant</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <div class="footer-logo">La Viguerie</div>
+          <p class="footer-tag">
+            Restaurant franco-italien au cœur d'Aigues-Mortes.
+            Pizzas, grillades, desserts maison et grande terrasse.
+          </p>
+          <div class="footer-socials" aria-label="Réseaux sociaux">
+            <a href="#" class="fsoc" aria-label="Facebook">f</a>
+            <a href="#" class="fsoc" aria-label="Instagram">ig</a>
+            <a href="#" class="fsoc" aria-label="TripAdvisor">ta</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="fcol-title">Navigation</div>
+          <ul class="fcol-links">
+            <li><a href="#ambiance">Le restaurant</a></li>
+            <li><a href="#carte">La carte</a></li>
+            <li><a href="#galerie">Photos</a></li>
+            <li><a href="#avis">Avis clients</a></li>
+            <li><a href="#infos">Infos pratiques</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="fcol-title">Horaires</div>
+          <div class="fh-row"><span class="fhday">Lun. – Ven.</span><span class="fhtime">11h45–14h · 18h45–21h15</span></div>
+          <div class="fh-row"><span class="fhday">Sam. – Dim.</span><span class="fhtime">11h45–14h · 18h45–21h15</span></div>
+          <p style="font-size:0.7rem;color:#5a4838;margin-top:.75rem;font-style:italic;">Horaires susceptibles de varier</p>
+        </div>
+
+        <div>
+          <div class="fcol-title">Contact</div>
+          <ul class="fcol-links">
+            <li><a href="tel:+33434286197">04 34 28 61 97</a></li>
+            <li style="color:#8a7060;font-size:.82rem;line-height:1.6;margin-top:.4rem;">
+              Place de la Viguerie<br />30220 Aigues-Mortes<br />Gard, Occitanie
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 La Viguerie · Aigues-Mortes · Tous droits réservés</p>
+        <p class="footer-copy">
+          <a href="https://www.tripadvisor.fr/Restaurant_Review-g187150-d8410824-Reviews-La_Viguerie-Aigues_Mortes_Gard_Occitanie.html"
+             target="_blank" rel="noopener" style="color:#5a4838;">
+            Voir sur TripAdvisor
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
