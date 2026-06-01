@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=1.6" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🍕</text></svg>" />
 </head>
 <body>
@@ -22,9 +22,8 @@
 
   <!-- NAVIGATION -->
   <nav id="nav" aria-label="Navigation principale">
-    <a href="#hero" class="nav-logo">
-      La Viguerie
-      <small>Aigues-Mortes · Gard</small>
+    <a href="#hero" class="nav-logo" style="display: flex; align-items: center;">
+      <img src="images/logo.jpg" alt="Logo La Viguerie" style="height: 48px; width: 48px; border-radius: 0; object-fit: cover; border: 1px solid rgba(44,30,18,0.15); background: #fff; padding: 2px; flex-shrink: 0;" />
     </a>
 
     <ul class="nav-links" id="nav-links">
@@ -46,32 +45,39 @@
     <!-- ══════════════════ HERO ══════════════════ -->
     <section id="hero">
 
-      <!-- Photo de la terrasse / façade du restaurant -->
-      <img src="images/terrasse.png" class="hero-photo" alt="Grande terrasse du restaurant La Viguerie sur la place de la Viguerie à Aigues-Mortes" style="object-fit: cover; object-position: center;" />
+      <!-- Photo des remparts d'Aigues-Mortes -->
+      <img src="images/remparts_hero.jpg" class="hero-photo" alt="Remparts historiques d'Aigues-Mortes" style="object-fit: cover; object-position: center;" />
 
       <div class="hero-overlay" aria-hidden="true"></div>
 
-      <div class="hero-content">
-        <div class="hero-tag">Restaurant · Aigues-Mortes</div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-tag">Restaurant · Aigues-Mortes</div>
 
-        <h1 class="hero-title">
-          La <em>Viguerie</em>
-        </h1>
+          <h1 class="hero-title">
+            La <em>Viguerie</em>
+          </h1>
 
-        <p class="hero-sub">
-          Une table chaleureuse au cœur de la cité médiévale —
-          cuisines française et italienne, grande terrasse,
-          et des profiteroles dont on se souvient longtemps.
-        </p>
+          <p class="hero-sub">
+            Une table chaleureuse au cœur de la cité médiévale —
+            cuisines française et italienne, grande terrasse,
+            et des profiteroles dont on se souvient longtemps.
+          </p>
 
-        <div class="hero-actions">
-          <a href="tel:+33434286197" class="btn btn-primary">Réserver une table</a>
-          <a href="#carte" class="btn btn-outline">Voir la carte</a>
-          <div class="hero-rating" aria-label="Note 4,5 sur 5 basée sur plus de 1000 avis">
-            <span class="hero-rating-stars">★★★★★</span>
-            <span>4,5 / 5</span>
-            <span class="hero-rating-count">· +1 000 avis Google</span>
+          <div class="hero-actions">
+            <a href="tel:+33434286197" class="btn btn-primary">Réserver une table</a>
+            <a href="#carte" class="btn btn-outline">Voir la carte</a>
+            <div class="hero-rating" aria-label="Note 4,5 sur 5 basée sur plus de 1000 avis">
+              <span class="hero-rating-stars">★★★★★</span>
+              <span>4,5 / 5</span>
+              <span class="hero-rating-count">· +1 000 avis Google</span>
+            </div>
           </div>
+        </div>
+
+        <!-- Logo médaillon à droite -->
+        <div class="hero-logo-right">
+          <img src="images/logo.jpg" alt="Logo La Viguerie" />
         </div>
       </div>
     </section>
@@ -318,37 +324,25 @@
                  style="width:100%;height:100%;object-fit:cover;" />
             <div class="gitem-label">La salle du restaurant</div>
           </div>
-          <!-- Photo pizza -->
-          <div class="gitem">
-            <img src="images/pizza.png"
-                 alt="Pizza de La Viguerie"
-                 loading="lazy"
-                 style="width:100%;height:100%;object-fit:cover;" />
-            <div class="gitem-label">Nos pizzas maison</div>
+          <!-- REMPLACER : photo d'une pizza -->
+          <div class="gitem photo-placeholder" style="border-radius:0; border:none;" role="img" aria-label="Photo : pizzas maison">
+            <div class="photo-placeholder-icon">📷</div>
+            <div class="photo-placeholder-label">Photo d'une pizza</div>
           </div>
-          <!-- Photo profiteroles -->
-          <div class="gitem">
-            <img src="images/profiteroles.png"
-                 alt="Profiteroles signature de La Viguerie"
-                 loading="lazy"
-                 style="width:100%;height:100%;object-fit:cover;" />
-            <div class="gitem-label">Profiteroles signature</div>
+          <!-- REMPLACER : photo des profiteroles -->
+          <div class="gitem photo-placeholder" style="border-radius:0; border:none;" role="img" aria-label="Photo : profiteroles signature">
+            <div class="photo-placeholder-icon">📷</div>
+            <div class="photo-placeholder-label">Photo des profiteroles</div>
           </div>
-          <!-- Photo remparts -->
-          <div class="gitem">
-            <img src="images/remparts.png"
-                 alt="Remparts d'Aigues-Mortes"
-                 loading="lazy"
-                 style="width:100%;height:100%;object-fit:cover;" />
-            <div class="gitem-label">Aigues-Mortes & ses remparts</div>
+          <!-- REMPLACER : photo d'Aigues-Mortes ou remparts -->
+          <div class="gitem photo-placeholder" style="border-radius:0; border:none;" role="img" aria-label="Photo : Aigues-Mortes ou remparts">
+            <div class="photo-placeholder-icon">📷</div>
+            <div class="photo-placeholder-label">Aigues-Mortes / remparts</div>
           </div>
-          <!-- Photo ambiance soirée -->
-          <div class="gitem">
-            <img src="images/interieur.jpg"
-                 alt="Ambiance soirée à La Viguerie"
-                 loading="lazy"
-                 style="width:100%;height:100%;object-fit:cover;" />
-            <div class="gitem-label">Ambiance soirée</div>
+          <!-- REMPLACER : photo ambiance soir ou repas -->
+          <div class="gitem photo-placeholder" style="border-radius:0; border:none;" role="img" aria-label="Photo : ambiance soir">
+            <div class="photo-placeholder-icon">📷</div>
+            <div class="photo-placeholder-label">Ambiance soirée</div>
           </div>
         </div>
 
@@ -356,7 +350,7 @@
     </section>
 
     <!-- ══════════════════ AVIS ══════════════════ -->
-    <section class="section section-alt" aria-labelledby="avis-title">
+    <section id="avis" class="section section-alt" aria-labelledby="avis-title">
       <div class="container">
 
         <div class="section-header reveal">
@@ -462,6 +456,54 @@
             </div>
           </article>
 
+        </div>
+
+        <!-- Bouton pour ouvrir le formulaire -->
+        <div style="text-align: center; margin-top: 3.5rem;" class="reveal">
+          <button id="btn-toggle-avis" class="btn btn-outline" style="border-color: var(--terracotta-l); color: var(--terracotta-l); font-size: 0.85rem; padding: 0.8rem 2.2rem;">
+            Laisser un avis client
+          </button>
+        </div>
+
+        <!-- Formulaire caché par défaut -->
+        <div id="form-avis-container" style="max-height: 0; overflow: hidden; transition: all 0.5s ease; max-width: 600px; margin: 0 auto;">
+          <div style="background: #1c130b; padding: 2rem; border-radius: var(--radius); border: 1px solid rgba(251,248,242,0.1); margin-top: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+            <h3 style="font-family: var(--serif); font-size: 1.3rem; color: var(--cream); margin-bottom: 1.5rem; text-align: center;">Votre avis nous intéresse</h3>
+            
+            <form id="form-avis" style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: 0.4rem;">
+                  <label for="avis-nom" style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--stone-l);">Votre nom</label>
+                  <input type="text" id="avis-nom" required placeholder="Ex: Jean D." style="background: rgba(251,248,242,0.05); border: 1px solid rgba(251,248,242,0.15); border-radius: var(--radius); padding: 0.75rem 1rem; color: var(--cream); font-size: 0.85rem;" />
+                </div>
+                <div style="flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: 0.4rem;">
+                  <label for="avis-ville" style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--stone-l);">Votre ville / origine</label>
+                  <input type="text" id="avis-ville" required placeholder="Ex: Aigues-Mortes" style="background: rgba(251,248,242,0.05); border: 1px solid rgba(251,248,242,0.15); border-radius: var(--radius); padding: 0.75rem 1rem; color: var(--cream); font-size: 0.85rem;" />
+                </div>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--stone-l);">Note générale</span>
+                <div class="star-rating" style="display: flex; gap: 0.4rem; font-size: 1.5rem; color: rgba(251,248,242,0.2); cursor: pointer;">
+                  <span class="star" data-value="1">★</span>
+                  <span class="star" data-value="2">★</span>
+                  <span class="star" data-value="3">★</span>
+                  <span class="star" data-value="4">★</span>
+                  <span class="star" data-value="5">★</span>
+                </div>
+                <input type="hidden" id="avis-note" value="" required />
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                <label for="avis-message" style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--stone-l);">Votre message</label>
+                <textarea id="avis-message" required rows="4" placeholder="Partagez votre expérience culinaire..." style="background: rgba(251,248,242,0.05); border: 1px solid rgba(251,248,242,0.15); border-radius: var(--radius); padding: 0.75rem 1rem; color: var(--cream); font-size: 0.85rem; line-height: 1.5; resize: vertical;"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="justify-content: center; padding: 0.9rem; font-size: 0.85rem; border-radius: var(--radius);">
+                Publier mon avis
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -581,8 +623,12 @@
               </a>
             </div>
 
-            <!-- Photo de l'intérieur ou de la place du restaurant -->
-            <img src="images/interieur.png" class="reveal rd2" alt="Intérieur chaleureux du restaurant La Viguerie" style="min-height:200px; width:100%; object-fit:cover; border-radius:var(--radius); box-shadow:0 8px 24px rgba(44,30,18,0.12);" />
+            <!-- REMPLACER : photo de la place ou de la façade du restaurant -->
+            <div class="photo-placeholder reveal rd2" style="min-height:200px; border-radius:var(--radius);" role="img" aria-label="Photo à ajouter : façade ou place du restaurant">
+              <div class="photo-placeholder-icon">📷</div>
+              <div class="photo-placeholder-label">Photo de la façade<br />ou de la place du restaurant</div>
+              <div class="photo-placeholder-hint">Remplacer par votre photo</div>
+            </div>
 
           </div>
         </div>
@@ -672,10 +718,128 @@
              target="_blank" rel="noopener" style="color:#5a4838;">
             Voir sur TripAdvisor
           </a>
+          · 
+          <a href="#" id="link-admin-panel" style="color:#5a4838; margin-left: 8px;">
+            Accès Administrateur
+          </a>
         </p>
       </div>
     </div>
   </footer>
+
+  <!-- ANNONCES DYNAMIQUES (TOP BANNER) -->
+  <div id="announcement-banner" style="display: none; background: var(--terracotta); color: var(--cream); text-align: center; padding: 0.6rem 1rem; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.05em; z-index: 299; position: fixed; top: 28px; left: 0; right: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.2); border-top: 1px solid rgba(251,248,242,0.15);">
+    📢 <span id="announcement-text">Annonce importante ici</span>
+  </div>
+
+  <!-- PANEL D'ADMINISTRATION (MODAL FULLSCREEN) -->
+  <div id="admin-modal" style="display: none; position: fixed; inset: 0; background: rgba(19, 10, 4, 0.98); z-index: 500; overflow-y: auto; color: var(--cream); font-family: var(--sans);">
+    <!-- BOUTON FERMER -->
+    <button id="admin-close" style="position: absolute; top: 1.5rem; right: 1.5rem; font-size: 1.5rem; color: var(--stone-l); cursor: pointer; padding: 0.5rem; line-height: 1; background: none; border: none;">✕</button>
+
+    <!-- PAGE DE CONNEXION -->
+    <div id="admin-login-page" style="max-width: 400px; margin: 10% auto; padding: 2.5rem; background: #1c130b; border: 1px solid rgba(251,248,242,0.1); border-radius: 12px; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.5);">
+      <h2 style="font-family: var(--serif); font-size: 1.8rem; color: var(--cream); margin-bottom: 0.5rem;">Espace Administrateur</h2>
+      <p style="color: var(--stone-l); font-size: 0.8rem; margin-bottom: 2rem;">Saisissez le mot de passe admin</p>
+      
+      <form id="admin-login-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <input type="password" id="admin-password" placeholder="Mot de passe (admin)" required style="background: rgba(251,248,242,0.05); border: 1px solid rgba(251,248,242,0.15); border-radius: var(--radius); padding: 0.8rem 1rem; color: var(--cream); text-align: center; font-size: 0.9rem;" />
+        <button type="submit" class="btn btn-primary" style="justify-content: center; padding: 0.9rem; border-radius: var(--radius);">Se connecter</button>
+        <p id="admin-login-error" style="color: var(--terracotta-l); font-size: 0.75rem; display: none; margin-top: 0.5rem; font-weight: 500;">❌ Mot de passe incorrect (indice: admin)</p>
+      </form>
+    </div>
+
+    <!-- DASHBOARD ADMINISTRATEUR -->
+    <div id="admin-dashboard" style="display: none; max-width: 1000px; margin: 4rem auto; padding: 2rem;">
+      <h2 style="font-family: var(--serif); font-size: 2.2rem; color: var(--cream); margin-bottom: 2rem; text-align: center; border-bottom: 1px solid rgba(251,248,242,0.1); padding-bottom: 1rem;">
+        Tableau de Bord Administrateur
+      </h2>
+
+      <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+        <!-- NAVIGATION DASHBOARD -->
+        <div style="flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: 0.75rem;">
+          <button class="admin-tab-btn active" data-tab="tab-avis" style="text-align: left; padding: 1rem; background: rgba(251,248,242,0.05); border-radius: var(--radius); border: 1px solid rgba(251,248,242,0.15); color: var(--cream); cursor: pointer; transition: all 0.2s; font-weight: 500;">⭐ Gestion des Avis</button>
+          <button class="admin-tab-btn" data-tab="tab-horaires" style="text-align: left; padding: 1rem; background: rgba(251,248,242,0.05); border-radius: var(--radius); border: 1px solid rgba(251,248,242,0.1); color: var(--cream); cursor: pointer; transition: all 0.2s; font-weight: 500;">🕒 Heures d'Ouverture</button>
+          <button class="admin-tab-btn" data-tab="tab-annonces" style="text-align: left; padding: 1rem; background: rgba(251,248,242,0.05); border-radius: var(--radius); border: 1px solid rgba(251,248,242,0.1); color: var(--cream); cursor: pointer; transition: all 0.2s; font-weight: 500;">📢 Annonces du Site</button>
+        </div>
+
+        <!-- CONTENU DASHBOARD -->
+        <div style="flex: 3; min-width: 300px; background: #1c130b; padding: 2rem; border-radius: 12px; border: 1px solid rgba(251,248,242,0.1);">
+          
+          <!-- TAB 1: AVIS -->
+          <div id="tab-avis" class="admin-tab-content" style="display: block;">
+            <h3 style="font-family: var(--serif); font-size: 1.4rem; color: var(--cream); margin-bottom: 1.5rem; border-bottom: 1px solid rgba(251,248,242,0.05); padding-bottom: 0.5rem;">Modération et Réponses aux Avis</h3>
+            <div id="admin-reviews-list" style="display: flex; flex-direction: column; gap: 1.5rem; max-height: 500px; overflow-y: auto; padding-right: 0.5rem;">
+              <!-- Rempli dynamiquement -->
+            </div>
+          </div>
+
+          <!-- TAB 2: HORAIRES -->
+          <div id="tab-horaires" class="admin-tab-content" style="display: none;">
+            <h3 style="font-family: var(--serif); font-size: 1.4rem; color: var(--cream); margin-bottom: 0.5rem; border-bottom: 1px solid rgba(251,248,242,0.05); padding-bottom: 0.5rem;">Ajuster les Heures d'Ouverture</h3>
+            <p style="color: var(--stone-l); font-size: 0.8rem; margin-bottom: 1.5rem;">Ces horaires mettront à jour le badge d'ouverture dynamique en temps réel au sommet du site.</p>
+            
+            <form id="admin-horaires-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <!-- Midi -->
+                <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.02); padding: 1.25rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.06);">
+                  <h4 style="font-size: 0.9rem; color: var(--terracotta-l); margin-bottom: 1rem; font-weight: 500;">☀️ Service du Midi</h4>
+                  <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.8rem;">
+                    <label style="font-size: 0.72rem; color: var(--stone-l); width: 80px;">Ouverture :</label>
+                    <input type="number" id="h-midi-o" min="0" max="23" style="width: 60px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); padding: 0.4rem; color: var(--cream); text-align: center;" />h
+                    <input type="number" id="m-midi-o" min="0" max="59" style="width: 60px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); padding: 0.4rem; color: var(--cream); text-align: center;" />m
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <label style="font-size: 0.72rem; color: var(--stone-l); width: 80px;">Fermeture :</label>
+                    <input type="number" id="h-midi-f" min="0" max="23" style="width: 60px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); padding: 0.4rem; color: var(--cream); text-align: center;" />h
+                    <input type="number" id="m-midi-f" min="0" max="59" style="width: 60px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); padding: 0.4rem; color: var(--cream); text-align: center;" />m
+                  </div>
+                </div>
+
+                <!-- Soir -->
+                <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.02); padding: 1.25rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.06);">
+                  <h4 style="font-size: 0.9rem; color: var(--terracotta-l); margin-bottom: 1rem; font-weight: 500;">🌙 Service du Soir</h4>
+                  <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.8rem;">
+                    <label style="font-size: 0.72rem; color: var(--stone-l); width: 80px;">Ouverture :</label>
+                    <input type="number" id="h-soir-o" min="0" max="23" style="width: 60px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); padding: 0.4rem; color: var(--cream); text-align: center;" />h
+                    <input type="number" id="m-soir-o" min="0" max="59" style="width: 60px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); padding: 0.4rem; color: var(--cream); text-align: center;" />m
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <label style="font-size: 0.72rem; color: var(--stone-l); width: 80px;">Fermeture :</label>
+                    <input type="number" id="h-soir-f" min="0" max="23" style="width: 60px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); padding: 0.4rem; color: var(--cream); text-align: center;" />h
+                    <input type="number" id="m-soir-f" min="0" max="59" style="width: 60px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); padding: 0.4rem; color: var(--cream); text-align: center;" />m
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="justify-content: center; padding: 0.8rem; margin-top: 1rem; border-radius: var(--radius);">Sauvegarder les horaires</button>
+            </form>
+          </div>
+
+          <!-- TAB 3: ANNONCES -->
+          <div id="tab-annonces" class="admin-tab-content" style="display: none;">
+            <h3 style="font-family: var(--serif); font-size: 1.4rem; color: var(--cream); margin-bottom: 0.5rem; border-bottom: 1px solid rgba(251,248,242,0.05); padding-bottom: 0.5rem;">Gérer les Annonces</h3>
+            <p style="color: var(--stone-l); font-size: 0.8rem; margin-bottom: 1.5rem;">Affichez un message d'alerte important au tout premier plan du site (ex: vacances annuelles, événement spécial).</p>
+            
+            <form id="admin-annonce-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <div style="display: flex; align-items: center; gap: 0.6rem; background: rgba(255,255,255,0.02); padding: 1rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.06);">
+                <input type="checkbox" id="annonce-active" style="width: 18px; height: 18px; cursor: pointer;" />
+                <label for="annonce-active" style="font-size: 0.85rem; color: var(--cream); cursor: pointer; user-select: none;">Activer le bandeau d'annonce au sommet du site</label>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                <label for="annonce-texte" style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--stone-l);">Texte de l'annonce</label>
+                <input type="text" id="annonce-texte" placeholder="Ex: Info : Le restaurant sera exceptionnellement fermé le dimanche 7 juin au soir." style="background: rgba(251,248,242,0.05); border: 1px solid rgba(251,248,242,0.15); border-radius: var(--radius); padding: 0.8rem 1rem; color: var(--cream); font-size: 0.85rem;" />
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="justify-content: center; padding: 0.8rem; margin-top: 1rem; border-radius: var(--radius);">Mettre à jour l'annonce</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
