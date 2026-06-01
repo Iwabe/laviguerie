@@ -98,6 +98,7 @@ window.addEventListener('scroll', () => {
 // Burger
 navBurger?.addEventListener('click', () => {
   const isOpen = navLinks.classList.toggle('open');
+  nav.classList.toggle('menu-open', isOpen); // Ajout direct de la classe pour compatibilité Safari/iOS
   navBurger.setAttribute('aria-expanded', String(isOpen));
   document.body.style.overflow = isOpen ? 'hidden' : '';
 
@@ -115,6 +116,7 @@ navBurger?.addEventListener('click', () => {
 $$('a', navLinks).forEach(a => {
   a.addEventListener('click', () => {
     navLinks.classList.remove('open');
+    nav.classList.remove('menu-open'); // Réinitialisation de la classe nav sur clic lien
     navBurger?.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
     $$('span', navBurger).forEach(b => { b.style.transform = ''; b.style.opacity = ''; });

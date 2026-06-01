@@ -1301,7 +1301,7 @@ button, input, select, textarea { font-family:inherit; background:none; border:n
 
 /* ── MOBILE MENU SQUISHING FIX ── */
 /* Désactive le contexte de confinement de la nav (backdrop-filter / transform) quand le menu mobile est ouvert */
-#nav:has(.nav-links.open) {
+#nav.menu-open {
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
   transform: none !important;
